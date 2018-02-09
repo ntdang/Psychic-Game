@@ -3,8 +3,9 @@
     var computerChoiceHTML = document.getElementById('computer-choice');
     var userGuessHTML = document.getElementById('user-guess');
     var winsHTML = document.getElementById('wins');
+    var lossesHTML = document.getElementById('losses');
     var guessesLeftHTML = document.getElementById('guesses-left');
-    var soFarHTML = document.getElementById('so-far'); 
+    // var soFarHTML = document.getElementById('so-far'); 
 
     // Create a variable array to hold possible computer choices
     var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -12,7 +13,8 @@
     // Create variables for wins/losses/guess left
     var wins = 0;
     var losses = 0;
-    var guesses = 10;
+    var guessesLeft = 10;
+    // var userGuess = "";
 
     // Whenever a key is pressed, alert "pressed a button".
     document.onkeyup = function(event) {
@@ -29,10 +31,10 @@
       if (userGuess === computerChoice) {
         wins++;
       } else {
-        guesses--;
+        guessesLeft--;
       }
 
-      if (guesses === 0) {
+      if (guessesLeft === 0) {
         losses++;
       }
 
@@ -53,15 +55,16 @@
         // }
 
         // Write results to HTML
-        userGuessHTML.textContent = userGuess;
-        computerChoiceHTML.textContent = computerChoice;
+        // userGuessHTML.textContent = userGuess;
+        // computerChoiceHTML.textContent = computerChoice;
         winsHTML.textContent = wins;
         lossesHTML.textContent = losses;
         guessesLeftHTML.textContent = guessesLeft;
+        userGuessHTML.textContent = userGuess;
 
-      } else {
-        alert("you don't know how to play rock paper scissors");
-      }
+      // } else {
+      //   alert("you don't know how to play rock paper scissors");
+      // }
 
     };
   
