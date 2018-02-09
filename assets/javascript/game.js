@@ -20,9 +20,11 @@
     document.onkeyup = function(event) {
       // Capture user's guess
       var userGuess = event.key.toLowerCase();
+      console.log(userGuess);
 
       // Generate a computer choice at random
       var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+      console.log(computerChoice);
 
       // Check user's guess against computer's choice with if/else statements
       // if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
