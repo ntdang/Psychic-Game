@@ -31,6 +31,7 @@
       var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
       console.log(computerChoice);
 
+      //Adds user's guess to array
       guessesSoFar.push(userGuess);
 
       // Check user's guess is a letter
@@ -55,7 +56,6 @@
         lossesHTML.textContent = losses;
         guessesLeftHTML.textContent = guessesLeft;
         guessesSoFarHTML.textContent = guessesSoFar;
-        //Need to display list of guessed letters
       
 
       // } else {
