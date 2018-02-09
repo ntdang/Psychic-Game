@@ -1,11 +1,10 @@
 
 // Grab DOM/HTML Elements and store in variables
     var computerChoiceHTML = document.getElementById('computer-choice');
-    var userGuessHTML = document.getElementById('user-guess');
     var winsHTML = document.getElementById('wins');
     var lossesHTML = document.getElementById('losses');
     var guessesLeftHTML = document.getElementById('guesses-left');
-    // var soFarHTML = document.getElementById('so-far'); 
+    var userGuessHTML = document.getElementById('user-guess');
 
     // Create a variable array to hold possible computer choices
     var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
@@ -16,6 +15,7 @@
     var guessesLeft = 10;
     var userGuess = '';
 
+    //Create reset function
     var reset = function() {
       guessesLeft = 10;
       userGuess = [];
@@ -31,7 +31,7 @@
       var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
       console.log(computerChoice);
 
-      // Check user's guess against computer's choice with if/else statements
+      // Check user's guess is a letter
       // if ((userGuess === "r") || (userGuess === "p") || (userGuess === "s")) {
         // Let's run the rest of the game
 
@@ -66,8 +66,6 @@
         // }
 
         // Write results to HTML
-        // userGuessHTML.textContent = userGuess;
-        // computerChoiceHTML.textContent = computerChoice;
         winsHTML.textContent = wins;
         lossesHTML.textContent = losses;
         guessesLeftHTML.textContent = guessesLeft;
