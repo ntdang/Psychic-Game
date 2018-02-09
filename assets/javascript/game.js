@@ -10,11 +10,16 @@
     // Create a variable array to hold possible computer choices
     var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 
-    // Create variables for wins/losses/guess left
+    // Create variables for wins/losses/guesses left/guesses so far
     var wins = 0;
     var losses = 0;
     var guessesLeft = 10;
-    var userGuess = [];
+    var userGuess = '';
+
+    var reset = function() {
+      guessesLeft = 10;
+      userGuess = [];
+    }
 
     // Whenever a key is pressed, alert "pressed a button".
     document.onkeyup = function(event) {
@@ -32,7 +37,7 @@
 
       if (userGuess === computerChoice) {
         wins++;
-        guessesLeft = 10;
+        reset();
       } else {
         guessesLeft--;
       }
@@ -40,7 +45,7 @@
 
       if (guessesLeft === 0) {
         losses++;
-        guessesLeft = 10;
+        reset();
       }
 
 
@@ -68,7 +73,7 @@
         guessesLeftHTML.textContent = guessesLeft;
         userGuessHTML.textContent = userGuess;
         //Need to display list of guessed letters
-
+      
 
       // } else {
       //   alert("you don't know how to play rock paper scissors");
