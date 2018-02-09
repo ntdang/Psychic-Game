@@ -14,7 +14,7 @@
     var wins = 0;
     var losses = 0;
     var guessesLeft = 10;
-    // var userGuess = "";
+    var userGuess = '';
 
     // Whenever a key is pressed, alert "pressed a button".
     document.onkeyup = function(event) {
@@ -30,13 +30,17 @@
 
       if (userGuess === computerChoice) {
         wins++;
+        guessesLeft = 10;
       } else {
         guessesLeft--;
       }
 
+
       if (guessesLeft === 0) {
         losses++;
+        guessesLeft = 10;
       }
+
 
         // if ((userGuess === "r") && (computerGuess === "s")) {
         //   wins++;
@@ -61,6 +65,9 @@
         lossesHTML.textContent = losses;
         guessesLeftHTML.textContent = guessesLeft;
         userGuessHTML.textContent = userGuess;
+        //Need to display list of guessed letters
+       
+
 
       // } else {
       //   alert("you don't know how to play rock paper scissors");
