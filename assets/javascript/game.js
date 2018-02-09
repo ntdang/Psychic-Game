@@ -14,7 +14,7 @@
     var wins = 0;
     var losses = 0;
     var guessesLeft = 10;
-    var userGuess = '';
+    var userGuess = [];
 
     // Whenever a key is pressed, alert "pressed a button".
     document.onkeyup = function(event) {
@@ -66,7 +66,6 @@
         guessesLeftHTML.textContent = guessesLeft;
         userGuessHTML.textContent = userGuess;
         //Need to display list of guessed letters
-       
 
 
       // } else {
