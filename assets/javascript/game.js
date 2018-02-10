@@ -35,7 +35,9 @@
       guessesSoFar.push(userGuess);
 
       // Check user's guess is a letter
-      
+      // for (var i = 0; i < alphabet.length; i++) {
+      //   if (userGuess.toLowerCase() === alphabet[i]) {
+        
         // Let's run the rest of the game
 
       if (userGuess === computerChoice) {
@@ -51,17 +53,12 @@
         reset();
       }
 
-      // else {
-      //   (userGuess !== alphabet.keys())
-      //   alert("That is not a letter!");
-      // }
-
         // Write results to HTML
         winsHTML.textContent = wins;
         lossesHTML.textContent = losses;
         guessesLeftHTML.textContent = guessesLeft;
         guessesSoFarHTML.textContent = guessesSoFar;
 
-   
-    };
-  
+      };
+  //   }
+  // };
