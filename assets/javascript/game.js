@@ -30,28 +30,34 @@
       // Generate a computer choice at random
       var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
       console.log(computerChoice);
+      console.log("userGuess is" + userGuess);
 
       //Adds user's guess to array
-      guessesSoFar.push(userGuess);
+      
+      console.log("guessesSoFar is" + guessesSoFar);
 
       // Check user's guess is a letter
-      // for (var i = 0; i < alphabet.length; i++) {
-      //   if (userGuess.toLowerCase() === alphabet[i]) {
-        
+      for (var i = 0; i < alphabet.length; i++) {
+        if (userGuess.toLowerCase() === alphabet[i]) {
+          guessesSoFar.push(userGuess);
+          console.log("got a letter ");
+
         // Let's run the rest of the game
 
-      if (userGuess === computerChoice) {
-        wins++;
-        reset();
-      } else {
-        guessesLeft--;
-      }
+          if (userGuess === computerChoice) {
+            wins++;
+            reset();
+          } else {
+            guessesLeft--;
+          }
 
 
-      if (guessesLeft === 0) {
-        losses++;
-        reset();
-      }
+          if (guessesLeft === 0) {
+            losses++;
+            reset();
+          }
+
+          console.log("guessesSoFar is" + guessesSoFar);
 
         // Write results to HTML
         winsHTML.textContent = wins;
@@ -60,5 +66,5 @@
         guessesSoFarHTML.textContent = guessesSoFar;
 
       };
-  //   }
-  // };
+    }
+  };
